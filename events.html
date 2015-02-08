@@ -1,0 +1,452 @@
+
+	<meta charset="UTF-8">
+	<title>Mechanica 2015</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style7.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo1.css" />
+        <link rel="stylesheet" type="text/css" href="css/style1.css" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
+        <link rel="stylesheet" type="text/css" href="css/demohover.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/style6hover.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css' />
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/tabbed.css">
+<script>
+	//function to show 
+	function div_show(){ 
+		document.getElementById('tabbed').style.display = "block";
+	}
+
+	//function to hide 
+	function div_hide(){ 
+		document.getElementById('tabbed').style.display = "none";
+	}
+</script>
+	<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+    <noscript>
+      <link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
+    </noscript>
+	<script src="js.js"></script>
+
+	<style>
+html,body{ 
+  margin:0;
+}
+
+canvas{
+	display:block;
+	vertical-align:bottom;
+}
+
+#particles-js{
+  height:100%;
+ /*background:#050337;*/
+ background-image: url("landingbg.jpg");
+ background-repeat: repeat-x;
+}
+#nav {
+      width: 50%;
+      float: left;
+      margin: 1em 0 3em 0;
+      padding: 0;
+      list-style: none;
+      
+       }
+   #nav li {
+      float: left; 
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      /*border-right: 1px solid #ccc; */
+      border-left: 1px solid #ccc;}
+   #nav li a {
+      display: block;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #f2ea11;
+       }
+   #nav li a:hover {
+      /*color: #000;
+      background-color: #f2ea11;*/
+      border-bottom: 3px solid #f2ea11; }
+    #login {
+    	width:15%;
+    	float: right;
+      margin: 1em 0 3em 0;
+      padding: 0;
+      list-style: none;
+      background-color: #f2ea11;
+    }
+    #login li {
+      float: right; 
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      /*border-right: 1px solid #ccc; */
+      border-right: 1px solid #ccc;}
+      #login li a {
+      display: block;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #000000;
+       }
+       #login li a:hover {
+      color: #000000;
+      /*background-color: #f2ea11;*/
+       }
+    
+</style>
+</head>
+<body>
+<div id="particles-js"></div>
+<div id="tabbed">
+  <div id="wrap">
+  <img id="close" src="images/close.png" onclick ="div_hide()">
+  <ul class="tabs group">
+    <li><a class="active" href="#/one">Tab 1</a></li>
+    <li><a href="#/two">Tab 2</a></li>
+    <li><a href="#/three">Tab 3</a></li>
+	<li><a href="#/four">Tab 4</a></li>
+	<li><a href="#/five">Tab 5</a></li>
+  </ul>
+  <div id="panels">
+    <p id="one">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit aliquam mauris, a mattis lectus varius id. Ut dolor tortor, hendrerit et porttitor in, gravida sed felis. Donec vehicula ex nec venenatis pulvinar. Donec vel sodales neque.</p>
+    <p id="two">Donec tincidunt tortor ut magna mollis sagittis. Mauris eu nibh non purus gravida hendrerit. Donec enim nisi, pretium eu libero sit amet, bibendum sagittis velit. Pellentesque non dapibus leo. Suspendisse ante tellus, volutpat ac leo eget, venenatis rhoncus sem.</p>
+    <p id="three"> Aenean dapibus eleifend venenatis. Integer et suscipit dui. Nam tellus diam, mattis in ultrices et, feugiat ac libero. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+	<p id="four">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit aliquam mauris, a mattis lectus varius id. Ut dolor tortor, hendrerit et porttitor in, gravida sed felis. Donec vehicula ex nec venenatis pulvinar. Donec vel sodales neque.</p>
+	<p id="five">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit aliquam mauris, a mattis lectus varius id. Ut dolor tortor, hendrerit et porttitor in, gravida sed felis. Donec vehicula ex nec venenatis pulvinar. Donec vel sodales neque.</p>
+  </div>
+  </div>
+ </div>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+(function($) {
+
+	var tabs =  $(".tabs li a");
+  
+	tabs.click(function() {
+		var panels = this.hash.replace('/','');
+		tabs.removeClass("active");
+		$(this).addClass("active");
+    $("#panels").find('p').hide();
+    $(panels).fadeIn(200);
+	});
+
+})(jQuery);
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script>
+particlesJS('particles-js', {
+    particles: {
+      color: '#fff',
+      shape: 'circle',
+      opacity: 1,
+      size: 2.5,
+      size_random: true,
+      nb: 100,
+      line_linked: {
+        enable_auto: true,
+        distance: 250,
+        color: '#fff',
+        opacity: 0.5,
+        width: 1,
+        condensed_mode: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 600
+        }
+      },
+      anim: {
+        enable: true,
+        speed: 2.5
+      }
+    },
+    interactivity: {
+      enable: true,
+      mouse: {
+        distance: 250
+      },
+      detect_on: 'canvas',
+      mode: 'grab',
+      line_linked: {
+        opacity: 0.5
+      },
+      events: {
+        onclick: {
+          push_particles: {
+            enable: true,
+            nb: 4
+          }
+        }
+      }
+    },
+    retina_detect: true
+});
+
+
+
+
+</script>
+                <div class="container">
+      
+      <section class="main">
+      
+        <ul class="ch-grid">
+          <li>
+            <div class="ch-item ">        
+              <div class="ch-info-wrap">
+                <div class="ch-info">
+                  <div class="ch-info-front"><h2 style="position:relative;top:30%;">Mixed Bag</h2></div>
+                  <div class="ch-info-back">
+                    <!-- ======= MIXED BAG ====== -->
+                <ul class="eventsmenu" >
+                    <li><a href="#" onclick="div_show()">Project-X</a></li>
+                    <li><a href="#" onclick="div_show()">Mechanica 0pen House</a></li>
+                    <li><a href="#" onclick="div_show()">Paper Presentations</a></li>
+                    <li><a href="#" onclick="div_show()">Lectures</a></li>
+                    <li><a href="#" onclick="div_show()">Triathalon</a></li>
+                    
+                </ul>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="ch-item ">
+              <div class="ch-info-wrap">
+                <div class="ch-info">
+                  <div class="ch-info-front "><h2 style="position:relative;top:30%;">Design and Build</h2></div>
+                  <div class="ch-info-back">
+                    <!--=== DESIGN AND BUILD ===-->
+                    <ul class="eventsmenu" >
+                    <li><a href="#" onclick="div_show()">Robo Soocer</a></li>
+                    <li><a href="#" onclick="div_show()">Manual Robotics</a></li>
+                    <li><a href="#" onclick="div_show()">Autonomous Robotics</a></li>
+                    <li><a href="#" onclick="div_show()">Junkyard Wars</a></li>
+                    <li><a href="#" onclick="div_show()">Fire N Ice</a></li>
+                    <li><a href="#" onclick="div_show()">Ultimate Hands On</a></li>
+                    
+                </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="ch-item ">
+              <div class="ch-info-wrap">
+                <div class="ch-info">
+                  <div class="ch-info-front "><h2 style="position:relative;top:30%;">Unleash</h2></div>
+                  <div class="ch-info-back">
+             <!--=== UNLEASH ===-->       
+            <ul class="eventsmenu" >
+                    <li><a href="#" onclick="div_show()">Mechanica Open Quiz</a></li>
+                    <li><a href="#" onclick="div_show()">Online Quiz</a></li>
+                    <li><a href="#" onclick="div_show()">Daily Events</a></li>
+                    <li><a href="#" onclick="div_show()">Case Study</a></li>
+                    <li><a href="#" onclick="div_show()">Puzzle Champ</a></li>
+                    
+                </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        
+      </section>
+        </div>
+        <div class="container" style="top:40%;left:00%">
+      
+      <section class="main">
+      
+        <ul class="ch-grid">
+          <li>
+            <div class="ch-item ">        
+              <div class="ch-info-wrap">
+                <div class="ch-info">
+                  <div class="ch-info-front"><h2 style="position:relative;top:30%;">Spot Light</h2></div>
+                  <div class="ch-info-back">
+                    <!-- ======= Spot Light ====== -->
+                <ul class="eventsmenu" >
+                    <li><a href="#" onclick="div_show()">IDP</a></li>
+                    <li><a href="#" onclick="div_show()">Smart Grid</a></li>
+                    <li><a href="#" onclick="div_show()">Desmod</a></li>
+                    <li><a href="#" onclick="div_show()">Sudoku</a></li>
+                    <li><a href="#" onclick="div_show()">Ideas Challenge</a></li>
+                    
+                </ul>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="ch-item ">
+              <div class="ch-info-wrap">
+                <div class="ch-info">
+                  <div class="ch-info-front "><h2 style="position:relative;top:30%;">Workshops</h2></div>
+                  <div class="ch-info-back">
+                    <!--=== WORKSHOPS===-->
+                    <ul class="eventsmenu" >
+                    <li><a href="#" onclick="div_show()">IC Engines Workshop</a></li>
+                    <li><a href="#" onclick="div_show()">Matlab Workshop</a></li>
+                    <li><a href="#" onclick="div_show()">3D Modeling Workshop</a></li>
+                    <li><a href="#" onclick="div_show()">Rubik's Cube Workshop</a></li>
+                    
+                    
+                </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+         <!-- <li>
+            <div class="ch-item ">
+              <div class="ch-info-wrap">
+                <div class="ch-info">
+                  <div class="ch-info-front "></div>
+                  <div class="ch-info-back">
+             <!--=== UNLEASH ===-->       
+           <!-- <ul class="eventsmenu" >
+                    <li><a href="#">Mechanica Open Quiz</a></li>
+                    <li><a href="#">Online Quiz</a></li>
+                    <li><a href="#">Daily Events</a></li>
+                    <li><a href="#">Case Study</a></li>
+                    <li><a href="#">Puzzle Champ</a></li>
+                    
+                </ul> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+        
+      </section>
+        </div>
+
+<div style="background:black;opacity:0.5;position:fixed;bottom:0%;width:100%;height:10%;color:#fff;">
+		<ul id = "nav">
+			<li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Sponsors</a></li>
+      <li><a href="hospi.html">Hospitality</a></li>
+      <li><a href="#">Contact Us</a></li>
+		</ul>
+		<ul id = "login">
+			
+      <li><a href="#">Register</a></li>
+      <li><a href="#">Login</a></li>
+      
+		</ul>
+
+<h1 Style="position:absolute;bottom:50%;font-size:5em;color:#f2ea11;">EVENTS</h1>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slitslider.js"></script>
+    <script type="text/javascript"> 
+      $(function() {
+      
+        var Page = (function() {
+
+          var $navArrows = $( '#nav-arrows' ),
+            $nav = $( '#nav-dots > span' ),
+            slitslider = $( '#slider' ).slitslider( {
+              onBeforeChange : function( slide, pos ) {
+
+                $nav.removeClass( 'nav-dot-current' );
+                $nav.eq( pos ).addClass( 'nav-dot-current' );
+
+              }
+            } ),
+
+            init = function() {
+
+              initEvents();
+              
+            },
+            initEvents = function() {
+
+              // add navigation events
+              $navArrows.children( ':last' ).on( 'click', function() {
+
+                slitslider.next();
+                return false;
+
+              } );
+
+              $navArrows.children( ':first' ).on( 'click', function() {
+                
+                slitslider.previous();
+                return false;
+
+              } );
+
+              $nav.each( function( i ) {
+              
+                $( this ).on( 'click', function( event ) {
+                  
+                  var $dot = $( this );
+                  
+                  if( !slitslider.isActive() ) {
+
+                    $nav.removeClass( 'nav-dot-current' );
+                    $dot.addClass( 'nav-dot-current' );
+                  
+                  }
+                  
+                  slitslider.jump( i + 1 );
+                  return false;
+                
+                } );
+                
+              } );
+
+            };
+
+            return { init : init };
+
+        })();
+
+        Page.init();
+
+        /**
+         * Notes: 
+         * 
+         * example how to add items:
+         */
+
+        /*
+        
+        var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
+        
+        // call the plugin's add method
+        ss.add($items);
+
+        */
+      
+      });
+    </script>
+
+</body>
